@@ -5,7 +5,7 @@ from typing import Union, Optional, List
 from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi import FastAPI, Form
 from fastapi.responses import FileResponse
-from UosStatistics.uosstatistics import UosStatistics
+from uos_statistics.uosstatistics import UosStatistics
 from fastapi.templating import Jinja2Templates
 from fastapi import Request
 import os
@@ -13,7 +13,7 @@ import aiofiles
 import asyncio
 
 app1 = APIRouter()
-templates = Jinja2Templates(directory="static")
+templates = Jinja2Templates(directory="static/html")
 lock = asyncio.Lock()  # 创建一个锁对象
 count = 1000
 

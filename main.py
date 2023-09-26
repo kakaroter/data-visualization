@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from UosStatistics.uploadfile import app1
+from api.uploadfile import app1
 app = FastAPI(debug=True)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")

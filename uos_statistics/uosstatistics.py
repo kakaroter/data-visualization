@@ -95,6 +95,6 @@ if __name__ == '__main__':
     print(module_data)
     # new_level = u.get_bar_data(level_data)
     # new_module = u.get_bar_data(module_data)
-    # # UosStatistics().generate_bar_chart(new_level)
+    # # uos_statistics().generate_bar_chart(new_level)
     # u.generate_bar_chart(new_module)
     u.generate_pie_chart([(key, value) for key, value in module_data.items()])
