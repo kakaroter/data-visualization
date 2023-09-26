@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<!--  <link rel="stylesheet" type="text/css" href="styles-light.css" id="theme-stylesheet">-->
+<!--  <link rel="stylesheet" type="text/css" href="styles-dark.css" id="theme-stylesheet-dark">-->
+  <title>Upload File</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="file"] {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .form-group button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* 流行的样式 */
+    .count {
+      font-family: 楷书;
+      font-size: 15px;
+      font-weight: bold;
+      font-style: italic;
+      color: #C2C2C6;
+      text-align: right;
+      margin-bottom: 20px;
+     }
+  </style>
+</head>
+<body class="day">
+  <div class="container">
+    <script src="dde_site/js/switchtheme.js"></script>
+    <button onclick="switchTheme()">🔅</button>
+    <p class="count">该页面已被访问{{count}}次</p>
+    <h2>UOS缺陷分析平台</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="file">选择文件：</label>
+        <input type="file" id="file" name="file">
+      </div>
+      <div class="form-group">
+        <button type="submit">提交</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
